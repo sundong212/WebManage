@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate';
+import Cookies from 'js-cookie';
 
 Vue.use(Vuex)
 
@@ -14,6 +16,7 @@ export default new Vuex.Store({
       content: []
     }
   },
+  plugins: [createPersistedState()],
   mutations: {
     SET_NEWS_TITLE: (state, title) => {
       state.news.title = title;
