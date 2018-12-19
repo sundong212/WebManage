@@ -1,13 +1,24 @@
 <template>
-  <HelloWorld />
+  <v-container fluid> 
+    <v-layout row wrap>
+      <v-flex xs3>
+        <Input />
+      </v-flex>
+      <v-flex xs9>
+        <Preview />
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+  import Input from '../components/Input'
+  import Preview from '../components/Preview'
 
   export default {
     components: {
-      HelloWorld
+      Input,
+      Preview
     }
   }
 </script>
